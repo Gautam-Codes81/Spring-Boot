@@ -11,6 +11,7 @@
         <module name="BeamLifeCycleDemo_7" />
         <module name="CoreDemo" />
         <module name="SpringCoreDemo2" />
+        <module name="crudSpringBootDemo" />
         <module name="demo" />
         <module name="BeanScopeDemo" />
         <module name="CircularDependancyDemoLec6" />
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="crudSpringBootDemo" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>
