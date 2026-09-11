@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="crudSpringBootDemo (1)" />
         <module name="ServletCrudDemo" />
         <module name="SpringcoreDemo" />
         <module name="BeamLifeCycleDemo_7" />
@@ -17,10 +18,15 @@
         <module name="CircularDependancyDemoLec6" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="crudDtoDemo" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="crudDtoDemo" options="-parameters" />
       <module name="crudSpringBootDemo" options="-parameters" />
+      <module name="crudSpringBootDemo (1)" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>
