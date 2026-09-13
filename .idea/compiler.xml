@@ -13,6 +13,7 @@
         <module name="CoreDemo" />
         <module name="SpringCoreDemo2" />
         <module name="crudSpringBootDemo" />
+        <module name="SpringMVCDemo" />
         <module name="demo" />
         <module name="BeanScopeDemo" />
         <module name="CircularDependancyDemoLec6" />
