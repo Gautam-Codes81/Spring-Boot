@@ -12,6 +12,8 @@ public class CrudSpringBootDemoApplication {
 //		System.out.println("gk");
 		System.out.println("gk");
 		System.out.println("GK");
+		System.out.println("rk");
+		System.out.println("rk");
 
 
 
