@@ -17,6 +17,7 @@
         <module name="demo" />
         <module name="BeanScopeDemo" />
         <module name="CircularDependancyDemoLec6" />
+        <module name="crudSpringBootDemo (2)" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,6 +29,7 @@
       <module name="crudDtoDemo" options="-parameters" />
       <module name="crudSpringBootDemo" options="-parameters" />
       <module name="crudSpringBootDemo (1)" options="-parameters" />
+      <module name="crudSpringBootDemo (2)" options="-parameters" />
       <module name="demo" options="-parameters" />
     </option>
   </component>
