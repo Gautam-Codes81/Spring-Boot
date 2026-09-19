@@ -6,7 +6,7 @@ public class CreateStudentRequestDto {
 
     private Long id;
     @NotBlank(message = "Name cannot be null/Empty or blank")
-    @Size(min = 2, max = 50, message = "Student name must be within 2 to 50 character long")
+    @Size(min = 2, max = 50, message = "Student name must be within 2 to 50 character long ")
     private String name;
 
     @NotNull(message = "Age is required")
@@ -14,7 +14,7 @@ public class CreateStudentRequestDto {
     private int age;
 
     @NotBlank(message = "Student email cannot be blank")
-    @Email(message = "Student email must be valid")
+    @Email(message = "Student email must be valid as a example abc@gmail.com")
     private String email;
 
     @NotNull(message = "RollNo is required")

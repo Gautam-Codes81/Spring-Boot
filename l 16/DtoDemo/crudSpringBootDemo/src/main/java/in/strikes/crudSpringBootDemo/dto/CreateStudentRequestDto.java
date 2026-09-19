@@ -14,7 +14,7 @@ public class CreateStudentRequestDto {
     private int age;
 
     @NotBlank(message = "Student email cannot be blank")
-    @Email(message = "Student email must be valid")
+    @Email(message = "Student email must be valid for example abc@gmail.com")
     private String email;
 
     @NotNull(message = "RollNo is required")
