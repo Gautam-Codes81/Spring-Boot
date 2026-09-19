@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/demo")
 public class DemoController {
      @Value("${app.welcome.message}")
-    private  String message;
+    private  String message = "";
+
+     @Value("${app.welcome.code}")
+     private Integer code;
 
      @PostMapping("/greet")
     public ResponseEntity<String> greet(){
