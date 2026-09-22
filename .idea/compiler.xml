@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="profileDemo" />
         <module name="SpringCoreDemo2" />
+        <module name="filterDemo (1)" />
         <module name="SpringMVCDemo" />
         <module name="demo" />
         <module name="crudSpringBootDemo (2)" />
@@ -34,6 +35,7 @@
       <module name="crudSpringBootDemo (2)" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="filterDemo" options="-parameters" />
+      <module name="filterDemo (1)" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
     </option>
   </component>
