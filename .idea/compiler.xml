@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="profileDemo" />
+        <module name="filterDemo2" />
         <module name="SpringCoreDemo2" />
         <module name="filterDemo (1)" />
         <module name="SpringMVCDemo" />
@@ -36,6 +37,7 @@
       <module name="demo" options="-parameters" />
       <module name="filterDemo" options="-parameters" />
       <module name="filterDemo (1)" options="-parameters" />
+      <module name="filterDemo2" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
     </option>
   </component>
