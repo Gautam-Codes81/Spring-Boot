@@ -9,9 +9,9 @@
         <module name="profileDemo" />
         <module name="filterDemo2" />
         <module name="SpringCoreDemo2" />
-        <module name="filterDemo (1)" />
         <module name="SpringMVCDemo" />
         <module name="demo" />
+        <module name="interceptorDemo" />
         <module name="crudSpringBootDemo (2)" />
         <module name="crudSpringBootDemo (1)" />
         <module name="ServletCrudDemo" />
@@ -26,6 +26,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="crudDtoDemo" target="21" />
+      <module name="filterDemo (1)" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -38,6 +39,7 @@
       <module name="filterDemo" options="-parameters" />
       <module name="filterDemo (1)" options="-parameters" />
       <module name="filterDemo2" options="-parameters" />
+      <module name="interceptorDemo" options="-parameters" />
       <module name="profileDemo" options="-parameters" />
     </option>
   </component>
