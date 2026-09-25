@@ -4,17 +4,31 @@ import jakarta.annotation.Nullable;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Component;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+
+//import static jdk.nio.zipfs.ZipFileAttributeView.AttrID.method;
 
 @Component
 public class LoggingInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request ,
                              HttpServletResponse response,
-                             Object handle){
+                             Object handler){
 
-        System.out.println("PreHandle called");
+        if(handler instanceof HandlerMethod handlerMethod){
+
+            String controllerName = handlerMethod.getBeanType().getName();
+            String methodName = handlerMethod.getMethod().getName();
+
+            System.out.println("PreHandle called");
+            System.out.println("Controller name" + controllerName);
+            System.out.println("Method name" + methodName);
+        }
+
+
+
         return  true;
 
     }
