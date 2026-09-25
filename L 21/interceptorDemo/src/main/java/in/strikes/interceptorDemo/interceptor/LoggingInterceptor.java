@@ -17,36 +17,32 @@ public class LoggingInterceptor implements HandlerInterceptor {
                              HttpServletResponse response,
                              Object handler){
 
-        if(handler instanceof HandlerMethod handlerMethod){
+        System.out.println("Incoming Request --------");
+        System.out.println("HTTP Method:" + request.getMethod());
+        System.out.println("Request Parameter: " + request.getRequestURI());
+        System.out.println("Request Parameters :"  + request.getQueryString() );
+        System.out.println("client IP:" + request.getRemoteAddr());
+        System.out.println("Token Header:" + request.getHeader("token"));
 
-            String controllerName = handlerMethod.getBeanType().getName();
-            String methodName = handlerMethod.getMethod().getName();
+        if(handler instanceof  HandlerMethod handlerMethod){
 
-            System.out.println("PreHandle called");
-            System.out.println("Controller name" + controllerName);
-            System.out.println("Method name" + methodName);
+            System.out.println("Controller :" + handlerMethod.getBeanType().getName());
+            System.out.println("Controller method" + handlerMethod.getMethod().getName());
+
         }
-
-
-
-        return  true;
+        return true;
 
     }
-    @Override
-    public void postHandle(HttpServletRequest request,
-                           HttpServletResponse response,
-                           Object handle,
-                           ModelAndView modelAndView){
-        System.out.println("postHandle called");
 
-    }
-     @Override
+
     public void  afterCompletion(HttpServletRequest request,
                                  HttpServletResponse response,
                                  Object handle,
                                  Exception ex) throws Exception{
 
-        System.out.println("afterCompletion called");
+        System.out.println("Response status:" + response.getStatus());
+
+
 
     }
 
