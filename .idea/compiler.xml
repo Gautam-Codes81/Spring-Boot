@@ -17,6 +17,7 @@
         <module name="ServletCrudDemo" />
         <module name="SpringcoreDemo" />
         <module name="BeamLifeCycleDemo_7" />
+        <module name="AopIntroductionDemoApplication" />
         <module name="CoreDemo" />
         <module name="crudSpringBootDemo" />
         <module name="BeanScopeDemo" />
@@ -31,6 +32,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AopIntroductionDemoApplication" options="-parameters" />
       <module name="crudDtoDemo" options="-parameters" />
       <module name="crudSpringBootDemo" options="-parameters" />
       <module name="crudSpringBootDemo (1)" options="-parameters" />

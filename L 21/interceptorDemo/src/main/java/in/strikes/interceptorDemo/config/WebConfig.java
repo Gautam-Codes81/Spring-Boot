@@ -1,6 +1,7 @@
 package in.strikes.interceptorDemo.config;
 
 import in.strikes.interceptorDemo.interceptor.AuthenticationInterceptor;
+import in.strikes.interceptorDemo.interceptor.AuthorizationInterceptor;
 import in.strikes.interceptorDemo.interceptor.LoggingInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -13,17 +14,31 @@ public class WebConfig implements WebMvcConfigurer {
 
     public AuthenticationInterceptor authenticationInterceptor;
 
-    public  WebConfig(LoggingInterceptor loggingInterceptor, AuthenticationInterceptor authenticationInterceptor){
+    public AuthorizationInterceptor authorizationInterceptor;
+
+    public  WebConfig(LoggingInterceptor loggingInterceptor, AuthenticationInterceptor authenticationInterceptor, AuthorizationInterceptor authorizationInterceptor){
         this.loggingInterceptor = loggingInterceptor;
 
         this.authenticationInterceptor = authenticationInterceptor;
+
+        this.authorizationInterceptor = authorizationInterceptor;
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry){
         registry.addInterceptor(authenticationInterceptor)
                 .addPathPatterns("/api/**")
-                .excludePathPatterns("/api/auth/login","api/public/**");
+                .excludePathPatterns("/api/auth/login","api/public/**")
+                        .order(1);
+
+
+
+         registry.addInterceptor(loggingInterceptor)
+                         .order(3);
+         registry.addInterceptor(authorizationInterceptor)
+                 .order(2);
+
+
     }
 
 }
